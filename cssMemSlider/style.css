@@ -16,9 +16,8 @@ body{
   margin: 0 auto;
   margin-top: 2vh;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   border-radius: 2%;
-  
 }
 .overflow{
   width: 100%;
@@ -34,6 +33,9 @@ body{
   position: relative;
   display: flex;
   flex-direction: row;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  width: 400%;
   
 }
 .controlsText{
@@ -48,10 +50,26 @@ body{
 input{
   display: none;
   }
-.text{
-  background-color: rgb(62, 8, 255);
+.overflowText{
   height: 100%;
   width: 70%;
+  overflow: hidden;
+  position: relative;
+  }
+.text{
+  background-color: rgb(62, 8, 255);
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.sentence{
+  width: 100%;
+  height: 100%;
+  font-size: 6em;
+  float: left;
 }
 .controls{
   background-color: rgb(251, 255, 8);
@@ -62,19 +80,24 @@ input{
   width: 100%;
   float:left;
 }
-#slide1:checked ~ .overflow #slider {
+.slides img{
+  width: 100%;
+  object-fit: contain;
+  /* object-fit: cover; */
+}
+#slide1:checked ~ .overflow #slider, #slide1:checked ~ .controlsText .overflowText #text {
   margin-left: 0%;
 }
-
-#slide2:checked ~ .overflow #slider {
+#slide2:checked ~ .overflow #slider, #slide2:checked ~ .controlsText .overflowText #text {
   margin-left: -100%;
 }
-#slide3:checked ~ .overflow .slider {
+#slide3:checked ~ .overflow .slider, #slide3:checked ~ .controlsText .overflowText #text {
   margin-left: -200%;
 }
-#slide4:checked ~ .overflow .slider {
+#slide4:checked ~ .overflow .slider, #slide4:checked ~ .controlsText .overflowText #text {
   margin-left: -300%;
 }
+
 label{
   height: 60px;
   width: 60px;
