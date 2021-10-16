@@ -10,9 +10,9 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 95vw;
+  width: 60vw;
   height: 96vh;
-  background-color: rgb(49, 49, 49);
+  /* background-color: rgb(49, 49, 49); */
   margin: 0 auto;
   margin-top: 2vh;
   position: relative;
@@ -22,7 +22,7 @@ body{
 .overflow{
   width: 100%;
   height: 70%;
-  background-color: rgb(100, 255, 126);
+  /* background-color: rgb(100, 255, 126); */
   border-radius: 2%;
   overflow: hidden;
   position: relative;
@@ -41,7 +41,7 @@ body{
 .controlsText{
   width: 100%;
   height: 25%;
-  background-color: rgb(115, 100, 255);
+  /* background-color: rgb(115, 100, 255); */
   position: relative;
   display: flex;
   flex-direction: row;
@@ -57,7 +57,7 @@ input{
   position: relative;
   }
 .text{
-  background-color: rgb(62, 8, 255);
+  /* background-color: rgb(62, 8, 255); */
   width: 400%;
   height: 100%;
   display: flex;
@@ -68,11 +68,11 @@ input{
 .sentence{
   width: 100%;
   height: 100%;
-  font-size: 6em;
+  font-size: 3em;
   float: left;
 }
 .controls{
-  background-color: rgb(251, 255, 8);
+  /* background-color: rgb(251, 255, 8); */
   height: 100%;
   width: 30%;
 }
@@ -83,6 +83,7 @@ input{
 .slides img{
   width: 100%;
   object-fit: contain;
+  border-radius: 2%;
   /* object-fit: cover; */
 }
 #slide1:checked ~ .overflow #slider, #slide1:checked ~ .controlsText .overflowText #text {
@@ -99,21 +100,33 @@ input{
 }
 
 label{
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   display: inline-block;
   border-radius: 50%;
-  background-color:rgb(49, 49, 49);
+  background-color:rgb(72, 212, 255);
   cursor: pointer;
-  margin-left: 30px;
-  border: solid 15px ;
+  /* margin-left: 30px; */
+  border: solid 25px rgb(145, 135, 135);
 }
-label:hover{
+/* label:hover{
   background-color: rgb(255, 255, 255);
-}
+} */
 #slide1:checked ~ .controlsText label:nth-child(1),
 #slide2:checked ~ .controlsText label:nth-child(2),
 #slide3:checked ~ .controlsText label:nth-child(3),
 #slide4:checked ~ .controlsText label:nth-child(4){
-  background-color: rosybrown;
+  background-color: rgb(0, 0, 0);
+} 
+label:hover{
+  background-color: rgb(255, 255, 255);
+}
+label:active{
+  opacity: 0.5;
+}
+#slide1:checked ~ .controlsText label:nth-child(1):hover,
+#slide2:checked ~ .controlsText label:nth-child(2):hover,
+#slide3:checked ~ .controlsText label:nth-child(3):hover,
+#slide4:checked ~ .controlsText label:nth-child(4):hover{
+  background-color: rgb(255, 255, 255);
 } 
